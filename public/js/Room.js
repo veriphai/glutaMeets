@@ -519,7 +519,7 @@ function whoAreYou() {
         allowOutsideClick: false,
         allowEscapeKey: false,
         background: swalBackground,
-        title: 'MiroTalk SFU',
+        title: 'GlutaMeets',
         input: 'text',
         inputPlaceholder: 'Enter your name',
         inputValue: default_name,
@@ -676,7 +676,7 @@ async function shareRoom(useNavigator = false) {
             } else if (result.isDenied) {
                 let message = {
                     email: '',
-                    subject: 'Please join our MiroTalkSfu Video Chat Meeting',
+                    subject: 'Please join our GlutaMeets Video Chat Meeting',
                     body: 'Click to join: ' + RoomURL,
                 };
                 shareRoomByEmail(message);
@@ -1568,7 +1568,7 @@ function leaveFeedback() {
         background: swalBackground,
         imageUrl: image.feedback,
         title: 'Leave a feedback',
-        text: 'Do you want to rate your MiroTalk experience?',
+        text: 'Do you want to rate your GlutaMeets experience?',
         confirmButtonText: `Yes`,
         denyButtonText: `No`,
         showClass: { popup: 'animate__animated animate__fadeInDown' },
