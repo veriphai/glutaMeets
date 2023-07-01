@@ -147,6 +147,7 @@ const dir = {
 const views = {
     about: path.join(__dirname, '../../', 'public/views/about.html'),
     landing: path.join(__dirname, '../../', 'public/views/landing.html'),
+    registration: path.join(__dirname, '../../', 'public/views/register.html'),
     login: path.join(__dirname, '../../', 'public/views/login.html'),
     newRoom: path.join(__dirname, '../../', 'public/views/newroom.html'),
     notFound: path.join(__dirname, '../../', 'public/views/404.html'),
@@ -226,6 +227,16 @@ function startServer() {
             res.sendFile(views.login);
         } else {
             res.sendFile(views.landing);
+        }
+    });
+
+    // register page
+    app.get(['/register'], (req, res) => {
+        if (hostCfg.protected == true) {
+            hostCfg.authenticated = false;
+            res.sendFile(views.login);
+        } else {
+            res.sendFile(views.registration);
         }
     });
 
